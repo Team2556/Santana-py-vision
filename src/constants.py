@@ -78,6 +78,10 @@ class CAN_Address(IntEnum):
 #endregion
 
 class DriveConstant:
+    kLeftMotor1Port = CAN_Address.ZERRO
+    kLeftMotor2Port = CAN_Address.ONE
+    kRightMotor1Port = CAN_Address.TWO
+    kRightMotor2Port = CAN_Address.THREE
     ...
 
 

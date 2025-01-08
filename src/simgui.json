@@ -1,0 +1,16 @@
+{
+  "NTProvider": {
+    "types": {
+      "/FMSInfo": "FMSInfo",
+      "/SmartDashboard/Field": "Field2d",
+      "/SmartDashboard/Scheduler": "Scheduler",
+      "/SmartDashboard/frontLeftMotor -from drivetrain": "Motor Controller",
+      "/SmartDashboard/frontRightMotor -from drivetrain": "Motor Controller",
+      "/SmartDashboard/rearLeftMotor -from drivetrain": "Motor Controller",
+      "/SmartDashboard/rearRightMotor -from drivetrain": "Motor Controller"
+    }
+  },
+  "NetworkTables Info": {
+    "visible": true
+  }
+}
