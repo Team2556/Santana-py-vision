@@ -24,6 +24,7 @@ class Robot(commands2.TimedCommandRobot):
         self.ConfigureButtonBindings()
         
         # Instantiate default commands
+        # Sanatana drive setup with the wide intake as front
         self.robotDrive.setDefaultCommand(commands2.cmd.run(lambda: self.robotDrive.drive(xSpeed=self.driverController.getLeftY() ,
                                                                                           ySpeed=self.driverController.getLeftX(),
                                                                                           zRotation=self.driverController.getRightX())#,  Rotation2d(0))

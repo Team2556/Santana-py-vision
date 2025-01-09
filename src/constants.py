@@ -85,6 +85,8 @@ class DriveConstant:
     kLeftMotor2Port = CAN_Address.THREE
     kRightMotor1Port = CAN_Address.TWO
     kRightMotor2Port = CAN_Address.FOUR
+    kWheelBase = 0.5 #meters
+    kTrackWidth = 0.5 #meters
     ...
 
 class OIConstant:
