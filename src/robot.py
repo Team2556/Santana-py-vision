@@ -1,5 +1,6 @@
 import wpilib
 from wpilib import (SmartDashboard, Field2d)
+from wpimath.geometry import Rotation2d
 import commands2
 from commands2 import CommandScheduler
 from constants import (DriveConstant,
@@ -23,7 +24,9 @@ class Robot(commands2.TimedCommandRobot):
         self.ConfigureButtonBindings()
         
         # Instantiate default commands
-        self.robotDrive.setDefaultCommand(commands2.cmd.run(lambda: self.robotDrive.driveWithJoystick(self.driverController)
+        self.robotDrive.setDefaultCommand(commands2.cmd.run(lambda: self.robotDrive.drive(xSpeed=self.driverController.getLeftY() ,
+                                                                                          ySpeed=self.driverController.getLeftX(),
+                                                                                          zRotation=self.driverController.getRightX())#,  Rotation2d(0))
                                                             , self.robotDrive))
     
         #region SmartDashboard init

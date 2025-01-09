@@ -78,12 +78,14 @@ class CAN_Address(IntEnum):
 #endregion
 
 class DriveConstant:
-    kLeftMotor1Port = CAN_Address.ZERRO
-    kLeftMotor2Port = CAN_Address.ONE
+    # used Phoenix Tuner to get addresses on 1/9/25
+    #shooter angler motor CAN_Address.TEN
+    #PDP CAN_Address.ZERO
+    kLeftMotor1Port = CAN_Address.ONE
+    kLeftMotor2Port = CAN_Address.THREE
     kRightMotor1Port = CAN_Address.TWO
-    kRightMotor2Port = CAN_Address.THREE
+    kRightMotor2Port = CAN_Address.FOUR
     ...
-
 
 class OIConstant:
     kDriver1ControllerPort = 0
