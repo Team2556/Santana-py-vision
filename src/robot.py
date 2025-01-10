@@ -1,6 +1,7 @@
 import wpilib
 from wpilib import (SmartDashboard, Field2d)
 from wpimath.geometry import Rotation2d
+import wpilib.cameraserver
 import commands2
 from commands2 import CommandScheduler
 from constants import (DriveConstant,
@@ -15,6 +16,9 @@ class Robot(commands2.TimedCommandRobot):
         """Robot-wide initialization code should go here."""
         CommandScheduler.getInstance().run()
 
+        #kickoff vision
+        wpilib.CameraServer.launch("vision.py:main")
+
         # Instantiate subsystems
         self.robotDrive = Drivetrain()
         # Instantiate OI
@@ -25,7 +29,7 @@ class Robot(commands2.TimedCommandRobot):
         
         # Instantiate default commands
         # Sanatana drive setup with the wide intake as front
-        self.robotDrive.setDefaultCommand(commands2.cmd.run(lambda: self.robotDrive.drive(xSpeed=self.driverController.getLeftY() ,
+        self.robotDrive.setDefaultCommand(commands2.cmd.run(lambda: self.robotDrive.drive(xSpeed=-self.driverController.getLeftY() ,
                                                                                           ySpeed=self.driverController.getLeftX(),
                                                                                           zRotation=self.driverController.getRightX())#,  Rotation2d(0))
                                                             , self.robotDrive))

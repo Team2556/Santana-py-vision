@@ -32,6 +32,7 @@ class PhysicsEngine:
 
         # Initialize motor controllers
         self.right_invert_YN = robot.robotDrive.right_invert_YN
+        self.right_invert_1neg1 = -1 if self.right_invert_YN else 1
 
         # useing phoenix5 sim collection off of our actual motors
         self.frontLeftMotor = robot.robotDrive.frontLeftMotor.getSimCollection()
@@ -52,8 +53,8 @@ class PhysicsEngine:
         feed_enable(0.020 * 2)
         frontLeftMotor_speed = self.frontLeftMotor.getMotorOutputLeadVoltage() /12 #assuming 12 volts for now (could sim the battery :)
         rearLeftMotor_speed = self.rearLeftMotor.getMotorOutputLeadVoltage() /12
-        frontRightMotor_speed = self.frontRightMotor.getMotorOutputLeadVoltage() /12
-        rearRightMotor_speed = self.rearRightMotor.getMotorOutputLeadVoltage() /12
+        frontRightMotor_speed = self.right_invert_1neg1 * self.frontRightMotor.getMotorOutputLeadVoltage() /12
+        rearRightMotor_speed = self.right_invert_1neg1 * self.rearRightMotor.getMotorOutputLeadVoltage() /12
 
         wheel_speeds = MecanumDriveWheelSpeeds(
                     frontLeftMotor_speed,
