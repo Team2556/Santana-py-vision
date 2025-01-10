@@ -10,12 +10,14 @@ from constants import (DriveConstant,
 from subsystems.drivetrain import Drivetrain
 from commands.autonomous import AutonomousCommand
 from commands.teleop import TeleopCommand
+#start camera server
+
 
 class Robot(commands2.TimedCommandRobot):
     def robotInit(self):
         """Robot-wide initialization code should go here."""
         CommandScheduler.getInstance().run()
-
+        
         #kickoff vision
         wpilib.CameraServer.launch("vision.py:main")
 

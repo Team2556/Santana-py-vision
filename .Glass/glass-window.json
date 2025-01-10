@@ -22,6 +22,21 @@
       "Column 1  Weight": "1.0000",
       "RefScale": "16"
     },
+    "0x9F7B26C4,2": {
+      "Column 0  Width": "160",
+      "Column 1  Weight": "1.0000",
+      "RefScale": "16"
+    },
+    "0xA47E7775,2": {
+      "Column 0  Width": "160",
+      "Column 1  Weight": "1.0000",
+      "RefScale": "16"
+    },
+    "0xD709DE01,2": {
+      "Column 0  Width": "160",
+      "Column 1  Weight": "1.0000",
+      "RefScale": "16"
+    },
     "0xE56EC1C2,4": {
       "Column 0  Weight": "1.0000",
       "Column 1  Weight": "1.0000",
@@ -32,18 +47,18 @@
   "Window": {
     "###NetworkTables": {
       "Collapsed": "0",
-      "Pos": "312,346",
-      "Size": "937,231"
+      "Pos": "144,289",
+      "Size": "937,566"
     },
     "###NetworkTables Info": {
       "Collapsed": "0",
-      "Pos": "250,29",
-      "Size": "750,246"
+      "Pos": "51,61",
+      "Size": "1102,569"
     },
     "###NetworkTables Settings": {
       "Collapsed": "0",
       "Pos": "37,37",
-      "Size": "423,190"
+      "Size": "400,190"
     },
     "Debug##Default": {
       "Collapsed": "0",

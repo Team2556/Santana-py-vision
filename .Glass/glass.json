@@ -1,4 +1,32 @@
 {
+  "NetworkTables": {
+    "transitory": {
+      "LiveWindow": {
+        ".status": {
+          "open": true
+        },
+        "open": true
+      },
+      "Shuffleboard": {
+        ".metadata": {
+          "open": true
+        },
+        "open": true
+      },
+      "SmartDashboard": {
+        "open": true
+      }
+    },
+    "types": {
+      "/FMSInfo": "FMSInfo",
+      "/SmartDashboard/Field": "Field2d",
+      "/SmartDashboard/Scheduler": "Scheduler",
+      "/SmartDashboard/frontLeftMotor -from drivetrain": "Motor Controller",
+      "/SmartDashboard/frontRightMotor -from drivetrain": "Motor Controller",
+      "/SmartDashboard/rearLeftMotor -from drivetrain": "Motor Controller",
+      "/SmartDashboard/rearRightMotor -from drivetrain": "Motor Controller"
+    }
+  },
   "NetworkTables Info": {
     "Clients": {
       "open": true
@@ -7,9 +35,18 @@
       "open": true
     },
     "Server": {
-      "Publishers": {
+      "Subscribers": {
         "open": true
       },
+      "open": true
+    },
+    "SmartDashboard-NT3@172.22.11.1:52497": {
+      "open": true
+    },
+    "glass@1": {
+      "open": true
+    },
+    "shuffleboard@2": {
       "Subscribers": {
         "open": true
       },
@@ -18,7 +55,8 @@
     "visible": true
   },
   "NetworkTables Settings": {
-    "mode": "Server",
+    "mode": "Client (NT4)",
+    "serverTeam": "2556",
     "visible": false
   }
 }

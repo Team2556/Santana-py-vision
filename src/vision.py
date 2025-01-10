@@ -6,6 +6,8 @@
 
 
 import ntcore
+# going to disable python -m robotpy installer niweb disable
+# can renable if needed python -m robotpy installer niweb enable
 import robotpy_apriltag
 from cscore import CameraServer
 
